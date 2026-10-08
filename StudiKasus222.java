@@ -4,10 +4,8 @@ public class StudiKasus222 {
         
         Scanner input = new Scanner(System.in);
         // Variables declaration
-            String name, activity;
+            String name, activity, fundingStatus, fundingReason;
             int numberOfDocuments, winnerRank;
-            String fundingStatus;
-            String fundingReason;
         
         // Input from user
             System.out.print("Enter your name: ");
@@ -18,7 +16,7 @@ public class StudiKasus222 {
             numberOfDocuments = input.nextInt();
             System.out.print("Enter winner rank (1-3): ");
             winnerRank = input.nextInt();
-
+        
         // Check funding eligibility based on activity, number of documents, and winner rank
             if (activity.equalsIgnoreCase("BELMAWA") || activity.equalsIgnoreCase("BAKORMA") || activity.equalsIgnoreCase("Mandiri")) {
                 if (numberOfDocuments == 4) {
@@ -45,6 +43,14 @@ public class StudiKasus222 {
                 fundingStatus = "Denied";
                 fundingReason = "Activity is not eligible for funding.";
             }
+
+        // Display the input data
+            System.out.println("\nName: " + name);
+            System.out.println("Activity: " + activity);
+            System.out.println("Number of documents: " + numberOfDocuments);
+            System.out.println("Winner rank: " + winnerRank);
+            System.out.println("Funding status: " + fundingStatus);
+            System.out.println(fundingReason);
         input.close();
     }
 }
