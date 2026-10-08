@@ -16,6 +16,21 @@ public class StudiKasus222 {
             numberOfDocuments = input.nextInt();
             System.out.print("Enter winner rank (1-3): ");
             winnerRank = input.nextInt();
+        
+        // Check funding eligibility based on activity, number of documents, and winner rank
+            if (activity.equalsIgnoreCase("BELMAWA") || activity.equalsIgnoreCase("BAKORMA") || activity.equalsIgnoreCase("Mandiri")) {
+                if (numberOfDocuments == 4) {
+                    if (winnerRank >= 1 && winnerRank <= 3) {
+                        fundingStatus = "Approved";
+                        fundingReason = "You meet all requirements";
+                    } else {
+                        fundingStatus = "Denied";
+                        fundingReason = "You must be a winner with rank 1-3 to be eligible for funding.";
+                    }
+                } else {
+                    fundingStatus = "Denied";
+                    fundingReason = "You must submit exactly 4 documents.";
+                }
         input.close();
     }
 }
