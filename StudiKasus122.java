@@ -15,7 +15,7 @@ public class StudiKasus122 {
         // Calculate total cost, discount, and total payment
             totalCost = pricePerCup * numberOfCups;
             if (totalCost >= 100000) {
-                discount = totalCost * 10 / 100; // 10% discount 
+                discount = totalCost * 10 / 100;
             }
             totalPayment = totalCost - discount;
             System.out.println("\nTotal cost: Rp" + totalCost);
